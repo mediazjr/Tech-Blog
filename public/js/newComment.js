@@ -1,7 +1,7 @@
 const newCommentHandler = async(event) => {
     event.preventDefault();
 
-    const content = document.querySelector('#newComment').ariaValueMax.trim();
+    const content = document.querySelector('#newComment').value.trim();
     const post_id = window.location.toString().split('/')[4]
     if (content) {
         const response = await fetch('/api/comments', {

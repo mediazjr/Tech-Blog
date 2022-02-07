@@ -4,7 +4,7 @@ const editPosttHandler = async(event) => {
     const description = document.querySelector('#description').value.trim();
     const id = window.location.toString().split('/')[4]
     if (name && description) {
-        const response = await fetch('/api/posts' + IdleDeadline, {
+        const response = await fetch('/api/posts/' + id, {
             method: 'PUT',
             body: JSON.stringify({ name, description }),
             headers: { 'Content-Type': 'application/json' },
