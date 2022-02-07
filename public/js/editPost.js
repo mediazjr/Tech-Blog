@@ -1,4 +1,4 @@
-const newCommentHandler = async(event) => {
+const editPosttHandler = async(event) => {
     event.preventDefault();
 
     const data = document.querySelector('#newComment').ariaValueMax.trim();
